@@ -1,0 +1,285 @@
+//メインファイトイベント
+
+event s7_p7_fight_event
+{
+	set(fighteventlimit,0)
+	
+	//ダウルフォールｖｓ２度目のコスタ
+	if (yet(s7_p7_bt01) && yet(s7_p7_ev03) == 0 && fighteventlimit == 0 && inBattle(dauru,michelle)  == 1 && isSameArmy(dauru,michelle) == 0){
+		set(fighteventlimit,1)
+		event(s7_p7_bt01)
+	}
+	
+}
+event s7_p11_fight_event
+{
+	set(fighteventlimit,0)
+	
+	//ペトカちゃん！　ペトカちゃん！！
+	if (yet(s7_p11_bt01) && fighteventlimit == 0 && inBattle(tungsten,petka)  == 1 && isSameArmy(tungsten,petka)){
+		set(fighteventlimit,1)
+		event(s7_p11_bt01)
+	}
+	//ｖｓアルフリット王国軍
+	if (yet(s7_p11_bt02) && fighteventlimit == 0 && inBattle(tungsten,wool) == 1 && isSameArmy(tungsten,wool) == 0){
+		set(fighteventlimit,1)
+		event(s7_p11_bt02)
+	}
+	//願うは必殺
+	if (yet(s7_p11_bt03) && fighteventlimit == 0 && inBattle(tungsten,meaberuta) == 1 && isSameArmy(tungsten,meaberuta) == 0 && inPower(s7_p8,meaberuta)){
+		set(fighteventlimit,1)
+		event(s7_p11_bt03)
+	}
+	//タングステンｖｓギロベッツ
+	if (yet(s7_p11_bt04) && fighteventlimit == 0 && inBattle(tungsten,gyrowetz) == 1 && isSameArmy(tungsten,gyrowetz) == 0){
+		set(fighteventlimit,1)
+		event(s7_p11_bt04)
+	}
+	//タングステンｖｓミシェル
+	if (yet(s7_p11_bt05) && fighteventlimit == 0 && inBattle(tungsten,michelle) == 1 && isSameArmy(tungsten,michelle) == 0){
+		set(fighteventlimit,1)
+		event(s7_p11_bt05)
+	}
+	
+}
+
+
+event s7_p11_bt05
+{
+	select(sentak, 戦闘イベント$「タングステンｖｓミシェル」)
+	if (sentak == 1)
+	{
+		scroll(michelle)
+		wait()
+		talk(michelle, 我々には魔女と戦う理由なんて無い。)
+		erase()
+		scroll(tungsten)
+		wait()
+		talk(tungsten, あーあーあー。@
+		……何でどいつもこいつも、$
+		話し合いで解決しようするんだ？)
+		talk(tungsten, だって、圧倒的な暴力で支配した方が$
+		よっぽど解決が早いし労力も少ないし、$
+		効率的で合理的じゃないか！)
+		talk(tungsten, まあいいや、死んじゃえ！！)
+		erase()
+	}
+}
+event s7_p11_bt04
+{
+	select(sentak, 戦闘イベント$「タングステンｖｓギロベッツ」)
+	if (sentak == 1)
+	{
+		scroll(tungsten)
+		wait()
+		talk(tungsten, 肥えてゆく屍は随分と滑稽に映る。@
+		横たわる死の袂で黄金の乳酒を分け合った君らが$
+		この世で最も恐れているのは肉体的な飢餓だろう。)
+		erase()
+		scroll(gyrowetz)
+		wait()
+		talk(gyrowetz, タングステン？　タングステンだと！？$
+		フロラントは何やっとる、奴も賛成したのか！@
+		魔女どもめ、タングステンを忘れたか、$
+		魔都も随分な節操無しになってしまったな！)
+		erase()
+		scroll(tungsten)
+		wait()
+		talk(tungsten, 魔女に善知と狡知の国境は無い。@
+		知識があれば横たわるだけで幸せを感じられる。$
+		夜に星を見れたら尚良い。)
+		talk(tungsten, 他人に理解を求めさえしなければ、$
+		お金もかからないし、労力もさほど必要じゃない。$
+		知識を得て思索に耽る以上に良い事は他に無いよ。)
+		talk(tungsten, 天体の運行は巡る。$
+		万古の礎は定期的に復古される。)
+		erase()
+		scroll(gyrowetz)
+		wait()
+		talk(gyrowetz, ……何を言っておる？$
+		サノアみたいな事を言……。)
+		talk(gyrowetz, いや、サノアと同じ事を言っとるな！)
+		talk(gyrowetz, 私が魔都に居たら貴様を戻すものか！@
+		何の為にこんな体になってまで$
+		我々があれを殺したと思っているのだ！)
+		erase()
+		scroll(tungsten)
+		wait()
+		talk(tungsten, ……殺した？@
+		殺せるものかよ、星は巡るんだから。)
+		talk(tungsten, 繰り返し求められるプロメテウス！$
+		やがて火は全ての暴力と権力を凌駕するだろう！@
+		古代の瓦礫は焼き払われなければ、$
+		現代人の為の建物が建てられないのだ！)
+		erase()
+	}
+}
+event s7_p11_bt03
+{
+	select(sentak, 戦闘イベント$「タングステンｖｓメア＝ベルタ」)
+	if (sentak == 1) 
+	{
+		scroll(meaberuta)
+		wait()
+		talk(meaberuta, タングステン師、$
+		貴女は何を何処まで知って居られるか。)
+		erase()
+		scroll(tungsten)
+		wait()
+		talk(tungsten, 魔女だもんねえ。$
+		墓まで持って行きたい秘密はあるよねえ。)
+		talk(tungsten, でもさ、君らはサノアの墓を暴いたろ。)
+		erase()
+		scroll(meaberuta)
+		wait()
+		talk(meaberuta, ……よく分かりました。)
+		talk(meaberuta, 私は最初から反対じゃったぞ、$
+		貴女を魔都を呼び戻す事にはのう。)
+		talk(meaberuta, 総じて死んでくれ、タングステン師！)
+		erase()
+		scroll(tungsten)
+		wait()
+		talk(tungsten, ……安心したな？@
+		復讐っていう如何にも人間らしい理由、$
+		私がひけらかしたのを見て安心したよね。)
+		talk(tungsten, ちょろいな。$
+		魔都で育った箱入り娘の相手なんて、$
+		この私にはお手玉と同じだよ。)
+		talk(tungsten, ジャグリングは、$
+		煮干しの出汁を取るのと同じ位得意なんだ。)
+		erase()
+	}
+}
+event s7_p11_bt02
+{
+	select(sentak, 戦闘イベント$「タングステンｖｓウール」)
+	if (sentak == 1) 
+	{
+		scroll(wool)
+		wait()
+		talk(wool, 我らはダーダ人を追い払った。@
+		しかし、その我々に協力する事も無く、$
+		お前たちはただただ南方を混乱させるばかり。)
+		talk(wool, 魔女よ、意味が分からぬ。$
+		一体何がしたいのだ。)
+		erase()
+		scroll(tungsten)
+		wait()
+		talk(tungsten, この分からず屋！！@
+		私の主張は魔女的に一貫しているんだ。$
+		戦争こそが問題を解決する究極の手段であると！)
+		talk(tungsten, 君らはタングステンをどう理解している！$
+		長方形か、台形か！　努力を放棄した平面の集合！@
+		私は霞の如き平和主義や夢の無い覇権主義でもない、$
+		多面的な人間細胞の分裂過程との和解を訴える！)
+		talk(tungsten, 楼蘭を通る絹は皇帝の黄金に例えられ、$
+		諸ハーンは強大な力の象徴としてこれを求めた。@
+		然るにトンブクトゥ、魔都の独立は万古不易、$
+		大国中の小国にあって両属すること能わず！)
+		talk(tungsten, 私たちは君らの慣わしに荷電する。$
+		既存の配置を変革し、皆殺しだよペトカちゃん！！@
+		弱アルカリ性である我々がお前たちの熱量を零にして、$
+		魔都の名を畏怖無しでは呼べぬようにしてやるのさ！)
+		erase()
+		scroll(wool)
+		wait()
+		talk(wool, やはり……やはり意味が分からん！)
+		erase()
+		scroll(tungsten)
+		wait()
+		talk(tungsten, わからない……？$
+		ふざけるな、何処のモンゴル大陸の常識だそれは！)
+		talk(tungsten, この鉄面皮！　ワカランチン！@
+		私はシャツの一枚すら持たず外套だけが友達で、$
+		生活は８０年遡ってもママーイに誓って清廉だ！$
+		皮を剥いで皮剥いたタマネギの如くにする者だ！)
+		erase()
+	}
+}
+event s7_p11_bt01
+{
+	select(sentak, 戦闘イベント$「タングステンとペトカ」)
+	if (sentak == 1) 
+	{
+		scroll(tungsten)
+		wait()
+		talk(tungsten, 獲物がわんさか居るぜペトカちゃん！！)
+		talk(tungsten, 今日は挽き肉がいいな！！)
+		erase()
+		scroll(petka)
+		wait()
+		talk(petka, じゃあ、今から準備しますね。)
+		erase()
+	}
+}
+
+unit s7unit1
+{
+	name = アブキールの副官
+}
+event s7_p1_bt01
+{
+	select(sentak, 戦闘イベント$「コスタ海軍ｖｓアブキール」)
+	if (sentak == 1) 
+	{
+		scroll(champollion)
+		wait()
+		talk(champollion, ちょ、ちょ、ちょちょ……。@
+		簡単な暴徒のカモ撃ちだって聞いてたのに、$
+		あれの何処をどう見ればそうなるんですかね！)
+		talk(champollion, 正規軍！　職業軍人！　コスタ海軍！$
+		あれと戦えとか内戦じゃないですか、あほらしか。@
+		何考えてるんですかね、議員どもは？$
+		内輪揉めとか本当、合理性の欠片も無い……。)
+		erase()
+		talk(s7unit1, 隊長、そろそろ進軍の号令を。)
+		erase()
+		talk(champollion, いや、帰りましょう。)
+		erase()
+		talk(s7unit1, 何時も何言ってるか分からんのですが、$
+		今日は一層意味不明ですね、シャンポリオン隊長。$
+		職務放棄や敵前逃亡になりますよ。)
+		erase()
+		talk(champollion, 貴女、何の為に軍人やってるんですか。)
+		talk(s7unit1, はっ？)
+		talk(champollion, 愛ですか金ですか、やむを得ず？$
+		それともノブレスオブリージュ？@
+		ちなみに愛には愛国心とか、愛郷心とか、$
+		そういうのも全部含むのでよろしく。)
+		talk(champollion, ちなみに私は愛ですよ。$
+		ああ、我が身の可愛さ。)
+		erase()
+		talk(s7unit1, あの、隊長……。)
+		erase()
+		talk(champollion, 貴女も思い出して下さいよ。$
+		蒸し風呂の如きパルティアでの、地獄の篭城を。@
+		折角神々の風が我々を救い給うたと言うのに、$
+		こんなつまらない天秤に命を乗せますか？)
+		talk(champollion, 乙女の命は重い、私の命はもっと重い。$
+		マアトの持つ羽と比べられるにはまだまだ若い。@
+		私の部下たる貴女たちもまた玉と愛でられるべき、$
+		大陸に燦たる文明国家の至宝でありますよ。)
+		talk(champollion, 然るに我々は何が面白くて$
+		危険へと前進しなければならんのでしょう。)
+		erase()
+		talk(s7unit1, 隊長、これが我々の仕事ですよ。)
+		erase()
+		talk(champollion, 面白くなけりゃ仕事じゃありません！$
+		仕事が私を選ぶな、私が仕事を選ぶんです！@
+		亡きシュフラン提督もそれで納得しました。$
+		その点、提督は議会よりもとても良かったですね。)
+		talk(champollion, さて、質問です。@
+		この場で同じコスタ海軍の戦友に矢を向ける事で$
+		後々弾劾の対象になったりしないと、$
+		誰かが私たちの名誉を保障してくれましたか？)
+		talk(champollion, 分からないならもっと言ってやる！$
+		議会の誰がシュフラン提督より偉いのか！？)
+		erase()
+		talk(s7unit1, ……。)
+		erase()
+		talk(champollion, 分かったら予定より前進を遅らせますよ。$
+		頃合を見て離脱です！)
+		erase()
+	}
+	retreatTroop(champollion)
+}

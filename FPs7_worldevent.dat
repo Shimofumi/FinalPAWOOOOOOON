@@ -1,0 +1,1151 @@
+
+unit s7p1op1
+{
+	name = コスタ貴族議員
+}
+unit s7p1op2
+{
+	name = コスタ王党派民選議員
+}
+unit s7p1op3
+{
+	name = コスタ森林党議員
+}
+
+
+
+event fp_p1_new01
+{
+	scroll(s40)
+	wait()
+	hideSpotMark()
+	showSpotMark(s40)
+	wait(10)
+	
+	select(sentak, イベント$「魔都：ＯＰ」)
+	if (sentak == 1) 
+	{
+	talk(tungsten, これまでのあらすじーっ！)
+	erase()
+	playBGM(#vs魔都大老)
+	wait(10)
+	addSpot(s93,s7_p11)
+	scroll(s93)
+	wait()
+	hideSpotMark()
+	showSpotMark(s93)
+	wait(10)
+	msg(――魔都象牙塔、屋上。)
+	erase()
+	wait(10)
+	shake(10)
+	playSE(power32)
+	wait(15)
+	shake(25)
+	playSE(mecha25)
+	wait(10)
+	talk(ringi, 死ねっ、焦熱炎弾！！)
+	talk(sufeisu, なにぃっ！？$
+	正気か、この塔ごと吹き飛ぶぞ！)
+	talk(sanoapcuni, gSanoac.png, グズるな、防御せんか！)
+	talk(ringi, 知らないわねえ！$
+	死ぬのはあんたらだけよッ！)
+	erase()
+	wait(10)
+	removeSpot(s93)
+	shake(35)
+	stopBGM()
+	wait(25)
+	msg(――フロラント・リンギ師が放った大魔法は、$
+	塔の屋上部分を完膚無きまでに消し飛ばした。@
+	サノアの"土葬の森"が樹木の防御壁を形成したが、$
+	その上から目標を消し炭にしてやったのだ！)
+	erase()
+	wait(10)
+	shake(25)
+	playSE(bom19_a)
+	wait(15)
+	talk(ringi, ざまーッみろ！@
+	サノアめ、スフェイスまで庇おうとしたのかしら。$
+	防御壁が薄くなってんじゃないの！$
+	馬ァ鹿！　私の魔法が片手間で防げるか！)
+	talk(ringi, あーっはっはっはっ！)
+	erase()
+	wait(10)
+	msg(――長年の宿敵を抹殺した事について、$
+	興奮冷めやらぬフロラント師は早口で勝利宣言を捲くし立てた。)
+	msg(――何せ相手はあの不条理の権化、$
+	大魔女たるサノアとスフェイスである。@
+	消し飛ばしてもまた戻ってくるかもしれず、$
+	その前に勝利を味わって置きたかったのだ。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	playBGM(#大規模魔女戦闘)
+	wait(10)
+	scroll(s40)
+	wait()
+	hideSpotMark()
+	showSpotMark(s40)
+	wait(10)
+	talk(ringi, くたばり損ないのサノアは今度こそ死んだ！$
+	スフェイスの奴も跡形も無く消し飛んだ！@
+	いやー、爽快爽快。$
+	最ッ高に気分が良いわ！)
+	erase()
+	wait(10)
+	msg(――事の終わりの一切合財を消し去って、$
+	大魔道フロラント師は全てどうでもよくなったのか、$
+	後始末も何もせずに隠棲に入った。@
+	困ったのは、残った魔女たちである。)
+	erase()
+	wait(10)
+	talk(meaberuta, 代わりの大魔道だ。$
+	黒宗の"不死"ギロベッツ師を呼べ。)
+	talk(petka, ギロベッツ師は音信不通です。)
+	talk(meaberuta, では、我々で話し合って運営するか。)
+	talk(kamu, それが出来たら、$
+	最初からこんな事にはなってませんよ。)
+	talk(meaberuta, ……では、やはり、$
+	フロラント師に戻って来るように頼むか？)
+	talk(yolande, では聞くが、この中にフロラント師の復位を$
+	自分から頼みに行きたいと言う奴は居るのか？)
+	talk(meaberuta, ……。)
+	talk(petka, あ、となるとタングステン師が$
+	現在の魔都で最高位の魔女ですね。)
+	talk(meaberuta, 門外七賢、"実法"タングステンの事か？$
+	あの放蕩者は何するか分からんぞ。@
+	他人にとっての万一を百分の一程度にはやる上に、$
+	奴の思いつきは止められんし保証も出来ん。)
+	talk(kamu, じゃあ、他にスフェイス卿が他にもう一人居ます？)
+	talk(meaberuta, ……他に案は無いのか？@
+	無いのか。$
+	……仕方無い、背に腹はかえられぬ。)
+	erase()
+	wait(10)
+	msg(――こうして"実法"タングステンは、$
+	魔女三百人がかりで捕獲され、魔都へ連れて来られた。)
+	erase()
+	wait(10)
+	talk(tungsten, 単独最上位だよ、やったね。$
+	魔都は私のモノだ。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+	playBGM()
+}
+event s7_p11_end01
+{
+	scroll(s40)
+	wait()
+	hideSpotMark()
+	showSpotMark(s40)
+	wait(10)
+	playBGM(#add酒ぶねの葡萄たち)
+	
+	select(sentak, イベント$「魔都：状況説明」)
+	if (sentak == 1) 
+	{
+	wait(10)
+	msg(――魔都、黒宗塔２８階。@
+	安楽椅子を背で押して遊びながら、$
+	タングステンは提出された書類に目を通した。)
+	erase()
+	wait(10)
+	talk(tungsten, ペトロニウスくん。)
+	talk(petka, ペトカです、タングステン師。$
+	ペトカ・ベルグレイヴ。)
+	talk(tungsten, インノケンティウス５世くん？)
+	talk(petka, それはピエールです。$
+	ピエール・ド・タランテーズ。)
+	talk(tungsten, なるほど。)
+	erase()
+	wait(10)
+	msg(――風が部屋の中に吹き込む。@
+	生ゴミ特有の嫌悪を催す生臭さが風に乗って、$
+	ペトカとタングステンは顔を見合わせた。)
+	erase()
+	wait(10)
+	talk(petka, これは慣れませんね。@
+	よく黒宗なんだから平気でしょうと言われますが、$
+	人の腐る刺す様な臭いと、生ゴミと汚物の混じった$
+	胃に来る酸っぱい臭いは別物なんですよ。)
+	talk(tungsten, えー、瓦礫はまだ片付けてないの？)
+	talk(petka, ダーダの人たちが壊した所は燃えましたし、$
+	燃え滓や半壊した倉庫は殆ど片付きましたよ。)
+	talk(tungsten, 燃え滓にしたのはフロラントちゃん、$
+	片付けたのは尻尾の生えた子がやったんだね。)
+	talk(petka, スフェイス卿に尻尾……？@
+	兎も角、この生臭さは、$
+	魔都に入れず周りで野宿している人たちですよ。$
+	ゴミを片付けないので、魔都の中まで臭いが……。)
+	erase()
+	wait(10)
+	msg(――魔都の状況は芳しくない。@
+	そもそも、魔都はダーダ人の襲撃で都市機能が半壊し、$
+	復興の話は外部から招いたスフェイス卿の指示で、$
+	今は瓦礫の撤去に終わりが見えてきた段である。)
+	erase()
+	wait(10)
+	scroll(s18)
+	wait()
+	hideSpotMark()
+	showSpotMark(s18)
+	wait(10)
+	msg(――なのに、このタイミングで隣人コスタは、$
+	何か訳の分からぬ揉め事を起こした。@
+	最近、魔都へコスタ人の流入が止まらないのは、$
+	コスタ人が魔都を避難所扱いしている為である。)
+	msg(――当初は彼らの身包みを剥がした後、$
+	ジバへ奴隷として売り払うなど、魔女たちによる$
+	努力によって魔都の人口は適切に保たれていた。)
+	msg(――しかし、南方の盟主を気取るアルフリット王は$
+	理想を追い求め仲良しこよしを押し付けるのである。@
+	すぐに隣国の政変による流入は制御不能となり、$
+	魔都の許容量はすぐに満たされた。)
+	erase()
+	wait(10)
+	scroll(s23)
+	wait()
+	hideSpotMark()
+	showSpotMark(s23)
+	wait(10)
+	talk(petka, まだダーダ人を森から追い払えてないのです。)
+	talk(tungsten, フロラントちゃんは仕事が甘くて困ったもんだね。@
+	ダーダ人を森にうろつかせておけば、$
+	王様を顎で使う口実になる思ったんだよ、きっと。)
+	talk(tungsten, フロラントちゃんにはそういうトコあるし、$
+	君たち魔女にもそういうトコあるから。@
+	魔都の外の事は本当に関心が無いんだもんね。$
+	追い払った後にトドメを刺し忘れたり。)
+	talk(petka, 本当にそうなんですよね。@
+	え？　トドメの刺し忘れですか？)
+	talk(tungsten, ん？　何か引っかかったのかな？$
+	私は思いつきで喋ってるから他意はないよ？)
+	erase()
+	wait(10)
+	scroll(s20)
+	wait()
+	hideSpotMark()
+	showSpotMark(s20)
+	wait(10)
+	talk(tungsten, あ、そうだ、ペトカちゃん。$
+	忘れずにギロやんを捕獲しておこうね。)
+	talk(petka, ギロベッツ師ですか？$
+	何処にいるかわからないのですよ。)
+	talk(tungsten, 森の東に居るよ？)
+	talk(petka, ふむ、よくご存知で。)
+	talk(tungsten, 森は使い慣れた机の上みたいなものだ。@
+	目を瞑っていても、$
+	どこになにがあるか、よく分かるの。)
+	talk(petka, ふーむ、タングステン師の事は良く分かりませんが。)
+	talk(tungsten, とりあえず、まずはだね。$
+	目の前に居るダーダ人とギロやんの為に戦争しようか。@
+	その後に帝都から来た王様と戦争するし、$
+	コスタともするよ。)
+	talk(petka, タングステン師は好戦的でしたっけ。)
+	talk(tungsten, 君たちは問題を解決する為に呼んだ、私を。@
+	だから、戦争しようね。$
+	戦争は全ての問題を解決してくれる。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+	playBGM()
+}
+event s7_p11_ev01
+{
+	scroll(tungsten)
+	wait()
+	hideSpotMark()
+	showSpotMark(tungsten)
+	wait(10)
+	playBGM(#add酒ぶねの葡萄たち)
+	
+	select(sentak, イベント$「サノア曰く、魔女は神殺し」)
+	if (sentak == 1) 
+	{
+	wait(10)
+	msg(――日が幾たび暮れようとも、$
+	魔都の状況は一向に改善しない。)
+	msg(――外で戦火が爆ぜる度、森への闖入者は増える。$
+	王国の勢力下に置かれた事でジバとの交流も減った。@
+	ジバとの物流が断絶した事は、$
+	魔都の経済とその生活にも浅からぬ打撃を与えた。)
+	msg(――半ば世捨て人として樹海の奥に暮らす魔女は、$
+	外の世界の図々しい常識に付き合いきれない。)
+	msg(――魔都を我が物顔で歩く外の人間は、$
+	本来の住人たちが払う配慮を知ろうともしない。@
+	文化は水と同じく、高きから低きへと流れる物。$
+	今の魔女は陰鬱とした不安を共有している。)
+	msg(――だから、タングステンは魔女に言った。)
+	erase()
+	wait(10)
+	talk(tungsten, そろそろ戦争しようか。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	scroll(rasuthimu)
+	wait()
+	hideSpotMark()
+	showSpotMark(rasuthimu)
+	wait(10)
+	msg(――王家の紋章が付いた馬車を中心にして、$
+	大門を幾らかの馬車と護衛からなる行列が通り抜ける。)
+	erase()
+	wait(10)
+	talk(gofmong, 待てっ、お待ちあれ！)
+	talk(reitaru, こはゴフモング殿、何か。$
+	ご存知の通り、ラスティム陛下の馬車でありますが。)
+	talk(gofmong, 護衛も人を伴わず何処へ行かれるつもりか！)
+	talk(reitaru, 何を！　ご覧あれ、馬車も人も予定通りです。)
+	talk(gofmong, そんな事は……ここに護衛や人員は誰だ？)
+	erase()
+	wait(10)
+	msg(――列を呼び止めたゴフモングが訝しむと、$
+	国王の乗る馬車が勝手に走り出した。)
+	erase()
+	wait(10)
+	talk(gofmong, ……こやつらは誰だ！$
+	我々が受け入れたコスタの議員ではない！)
+	talk(reitaru, なっ……御者、止まれ！　何をしている！)
+	erase()
+	wait(10)
+	shake(10)
+	playSE(chari15_b)
+	wait(15)
+	talk(gofmong, 言う事を聞かぬか、止まらねば斬るぞ！)
+	erase()
+	wait(10)
+	shake(10)
+	playSE(gun29)
+	wait(15)
+	talk(gofmong, ぐわっ、銃撃だと、レイタール殿！)
+	talk(reitaru, わ、私ではありませぬ！)
+	erase()
+	wait(10)
+	msg(――護衛として付き添う騎士や銃士の中から、$
+	突然襲い掛かってくる者がある。@
+	服装が同じで敵味方が分からず乱戦となり、$
+	馬車の一団は見る間に遠ざかってゆく。)
+	erase()
+	wait(10)
+	talk(gofmong, 陛下が乗っておられるのだ！$
+	お、おのれっ狼藉者どもめ！)
+	erase()
+	wait(10)
+	msg(――走り出した馬車は森の中へ入ってしまう。@
+	道を知らなければ進みも戻りも出来ない大森林、$
+	こうなっては騎士たちに追う事は出来ないのだった。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+	playBGM()
+}
+event s7_p11_ev02
+{
+	scroll(tungsten)
+	wait()
+	hideSpotMark()
+	showSpotMark(tungsten)
+	wait(10)
+	playBGM(#add酒ぶねの葡萄たち)
+	
+	select(sentak, イベント$「ペトカ曰く、禁忌はあった方が良い」)
+	if (sentak == 1) 
+	{
+	msg(――こうして魔女たちは見事に国王を拉致した。)
+	erase()
+	wait(10)
+	talk(tungsten, 亡命者にコスタの議員が混じってたから、$
+	王党派と森林党の議員を入れ替えちゃった。)
+	talk(tungsten, 勝手に手駒を使っちゃってごめんね、メアメア。)
+	talk(meaberuta, いや……、それは良いのですがのう。)
+	talk(meaberuta, （……か、勝手に使ったじゃと？$
+	　森林党の命令系統を乗っ取ったのか！？@
+	　こ、こんな状況、既に組織としては$
+	　壊滅しているも同然ではないか！）)
+	erase()
+	wait(10)
+	talk(rasuthimu, ……。)
+	erase()
+	wait(10)
+	talk(petka, 本物ですか？)
+	talk(meaberuta, うむ、間違いない。)
+	talk(kamu, しかし、国王なんかどうするんですか。)
+	talk(kamu, ジバに売りますか、身代金を取りますか？@
+	値は吊り上げられそうですが、$
+	王位持ちの相場なんて分かりませんよ。)
+	talk(meaberuta, 金に換えるのは勿体無いじゃろう。@
+	持っているだけで、$
+	魔都から王令を打ち放題なのじゃぞ。)
+	talk(yolande, おいおい、待て待て！@
+	先ほどから聞いていれば、もっと外の貴人への、$
+	こう、対する時の態度ってモノがあるでしょう！)
+	talk(yolande, 魔都外にとっての王とは、$
+	もっと価値ある物であり、そう、ええと、$
+	言ってみれば……ええと……)
+	talk(tungsten, 何でも引換券。)
+	talk(yolande, そう、言わば王とは何でも引換券！$
+	端金や王令と引き換えるなんて勿体無い！)
+	talk(yolande, んっ？　あれ？)
+	talk(petka, そういわれると確かに、$
+	使い道を考えないといけない気がしますね。)
+	talk(tungsten, まずは魔都に流れてきた外人を帰そう。$
+	王令を出して、コスタの騒ぎを止めさせる。)
+	talk(kamu, ……それで止まるなら、$
+	コスタは内戦などしていないと思うのですが。)
+	talk(tungsten, 王の宮廷に王が居るならそうなる。@
+	でもカームちゃん、宮廷に王は不在なんだよ。$
+	宮廷とコスタは停戦するよ。)
+	talk(kamu, ……？@
+	よく分かりませんが、言う通りにします。)
+	erase()
+	wait(10)
+	msg(――魔都は王令を名分として、$
+	魔都に避難していたコスタ人を追い払った。@
+	程なく宮廷とコスタ海軍は停戦し、$
+	タングステンの言った通りになった。)
+	erase()
+	wait(10)
+	talk(tungsten, 一つしか無い矛先を、$
+	同時に二つへ向けるなんて出来ないもんね。)
+	talk(tungsten, 残った王様はコリオメソスに売るよ。)
+	talk(meaberuta, そやつは帝国の大貴族じゃな？$
+	何故、ジバに売らぬのかの。)
+	talk(tungsten, ジバに売るのは奴隷だよ？@
+	王様は奴隷には出来ないねえ。$
+	コリオメソスは高く買ってくれる。$
+	帝国圏を統一する名分になるんだもの。)
+	talk(tungsten, 私たちはそのお金で戦争するよ。$
+	魔都は独立独歩の為に、人と物と金を注ぎ込む。@
+	経済的にも、軍事的にも、精神的にも、$
+	自立する為にまずは戦争しよう。)
+	talk(tungsten, ダーダ人が来れば王国に頼り、$
+	金が無くなればジバに奴隷を売り、$
+	大魔道が居なくなれば外の魔女から招く。@
+	何だかんだ魔女は外に依存しすぎなんだよ。)
+	talk(tungsten, そういうのよくない。$
+	原点に立ち返って、独立しよう、戦争しよう。@
+	魔都が魔女のものであるために。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+	addMoney(s7_p11,60000)
+	dialog(王を帝国へ売り払って６００００相当の軍資金を獲得しました！)
+	if (isAlive(s7_p1)){
+	setDiplo(s7_p1,s7_p11,0)
+	resetLeague(s7_p1,s7_p11)
+	changePowerFlag(s7_p1,Flag66)
+	}
+	if (isAlive(s7_p7)){
+	setDiplo(s7_p7,s7_p11,0)
+	resetLeague(s7_p7,s7_p11)
+	changePowerFlag(s7_p7,Flag31)
+	}
+	wait(25)
+	dialog(魔都はコスタ・王国軍との同盟を破棄しました！)
+	playBGM()
+}
+unit s7p11ev3cast1
+{
+	name = コスタからの亡命者
+}
+event s7_p11_ev03
+{
+	scroll(s40)
+	wait()
+	hideSpotMark()
+	showSpotMark(s40)
+	wait(10)
+	playBGM(#add酒ぶねの葡萄たち)
+	
+	select(sentak, イベント$「今日から創まる骨相学」)
+	if (sentak == 1) 
+	{
+	msg(――神代の都市成立以来、深い森のその奥で$
+	慎ましやかに暮らしてきた魔都の住人は、$
+	騒々しい外の空気を持ち込まれるのを嫌っていた。)
+	msg(――そんな魔都への亡命希望者の流入は、$
+	コスタ内戦から波及した問題の一つである。)
+	erase()
+	wait(10)
+	talk(s7p11ev3cast1, 魔都に入れてくれ！)
+	talk(yolande, 安物の指輪しか出せない癖に喚くな！$
+	要再審査だ、とっとと最後尾に並び直せ！)
+	erase()
+	wait(10)
+	msg(――ヨランドの指揮する紫宗が、$
+	入場を求める人の山を連日押し止めていた。@
+	現実問題、魔都が全て受け入れる事は不可能で、$
+	魔女は受け入れる気など無い者が殆どである。)
+	erase()
+	wait(10)
+	talk(s7p11ev3cast1, はやくベッドで眠りたい。$
+	馬車での寝泊りはもうたくさんだ。)
+	talk(yolande, ええい、愚痴るなうるさい。$
+	手が足りん、手が足りん。)
+	erase()
+	wait(10)
+	msg(――傍の壁に立て掛けていた"猿の手"の指が一本、$
+	乾いた音を立ててゆっくり折れ曲がろうした。)
+	erase()
+	wait(10)
+	talk(yolande, ハッ、おい待て違うぞ、猿の手。$
+	今のは願い事ではなく比喩表現だ、馬鹿者。)
+	talk(yolande, 人の揚げ足を取るのは恥なのだぞ。@
+	何故なら得てして理屈で返せない時の手段であり、$
+	自分の頭が悪い事を吹聴するのと同義だからだ。)
+	erase()
+	wait(10)
+	msg(――猿の手は曲がろうとした指を戻した。)
+	erase()
+	wait(10)
+	talk(tungsten, ヨランドくん、励んでるか。)
+	talk(yolande, ゲッ、タングステン……師！)
+	talk(tungsten, 最近、奴隷売買部の利益率が下がってる。$
+	戦争には金が必要なんだよ、わかるね。$
+	金、人、モノを湯水の如く使うのが戦争の醍醐味だ。)
+	talk(yolande, 初めの頃の、人数が少ないうちは$
+	身包み剥がして売り払うのも楽だったんですがね。@
+	事情が事情だけに身代金も期待できない上に、$
+	最近は人数多すぎて大っぴらに動けないんですよ。)
+	talk(yolande, あと、労働奴隷としては$
+	ダーダ人に比べてコスタ人は不人気ですし。@
+	すると装飾品を売り払う方が主になりますが、$
+	こちらはどうしてもブレが激しいですからね。)
+	talk(tungsten, 国境警備が仕事してない。@
+	無許可の越境は現場判断での捕縛、$
+	強行突破に対しては魔法攻撃が許可されてる。)
+	talk(yolande, 緑色砦やその近くに行く奴は、$
+	大体が落ちこぼれ連中や浪人生ですから。@
+	どうせ遊ぶ金か何か渡されて、$
+	破けたザルの様に通してるんでしょう。)
+	talk(yolande, とはいえ、国境とやらが機能する前提ならば、$
+	魔都に来る者は正式な客人でなければ"おかしい"。$
+	あまり粗雑には扱えません。)
+	talk(tungsten, ふーん、へー、ほー。)
+	erase()
+	wait(10)
+	msg(――話す二人の間に紫宗の魔女が飛び込んで、$
+	コスタ人同士の喧嘩がまた始まったとヨランドを呼んだ。@
+	ヨランドは舌打ちをしながら杖を抱えて飛び出し、$
+	タングステンはふわふわと宙に浮きながら後を追う。)
+	erase()
+	wait(10)
+	talk(yolande, 喧嘩してるのはどいつだ、お前か！)
+	talk(s7p11ev3cast1, なっ、なんでしょうか。)
+	erase()
+	wait(10)
+	msg(――乱闘騒ぎを起こしている中から適当に一人、$
+	頭を鷲掴みにして、ヨランドは魔法を唱える。)
+	erase()
+	wait(10)
+	talk(yolande, 沼地化。)
+	erase()
+	wait(10)
+	playSE(byoro09)
+	wait(10)
+	talk(s7p11ev3cast1, あ、ああ。@
+	ああ、おえっ、ひいあああ、うひおおおおお。$
+	ろろろろろろろろろろろ。)
+	erase()
+	wait(10)
+	msg(――頭蓋骨の中に沼地化を受けたコスタ人は、$
+	顔の穴と言う穴から透明の体液を垂れ流しながら$
+	骨が抜かれた様に脱力、その場に崩れた。)
+	erase()
+	wait(10)
+	talk(tungsten, あったまぐちゃぐちゃ。)
+	talk(yolande, どうせまた食い物がまずいだの、多いだ少ないだ、$
+	寝床がどうだ、歯軋りがどうだとやったのだろう。@
+	不満があるなら私はいつでも相談に乗るぞ。$
+	その肩に乗っている重りを楽にしてやる。)
+	talk(yolande, 人それぞれ、頭の中身は違う。@
+	怒りっぽいの、思考力に劣るの、神学に適したの、$
+	理学が得意なの、"隷属に適したの"とか、だ。)
+	talk(yolande, 人の上に立つのが天分なヒトが居るなら、$
+	奴隷が天分なヒトも当然居るだろう。@
+	魔女に四色があるように尊重しよう、個性を。$
+	一人一人の能力を発揮できる様にな。)
+	erase()
+	wait(10)
+	msg(――頭に血が上っていた人々もこれには顔面蒼白。)
+	erase()
+	wait(10)
+	talk(tungsten, ヨランド、手際が慣れてるね。)
+	talk(yolande, どうせ三日もすれば元通りなんで。@
+	何度言っても聞きやしない、$
+	魔都の周りは奴らの生活ゴミだらけです。)
+	talk(tungsten, メア＝ベルタから聞いたけど、$
+	ローカ・コスタの議員が何人か紛れてるそうだね。)
+	talk(yolande, そういう連中は貴金属類を持ってますな。)
+	talk(tungsten, 使い出があるから身柄を確保しといてね。)
+	talk(yolande, はあ……まあ、いいですけど。)
+	erase()
+	wait(10)
+	talk(petka, あっ、タングステン師、こんな所に居られた。$
+	今日は緑宗との打ち合わせがあるので、$
+	早めに来て下さいって言ったじゃないですか。)
+	talk(tungsten, えー、ペトカちゃん。$
+	私、人に物を教えるのが得意なんだよ。@
+	時代は総活躍社会でね、私が率先してやり、$
+	私が理屈を教え、私が褒めて伸ばすんだよ。)
+	talk(petka, 面倒なら頷いてるだけでいいですから。$
+	さあこっちです、来て下さい。)
+	talk(tungsten, あわわわ。)
+	erase()
+	wait(10)
+	msg(――タングステンは飛んで逃げようとしたものの、$
+	ペトカに外套を掴まれて凧の様に引っ張られていった。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+	playBGM()
+}
+event s7_p11_ev04
+{
+	scroll(s93)
+	wait()
+	hideSpotMark()
+	showSpotMark(s93)
+	wait(10)
+	playBGM(#add酒ぶねの葡萄たち)
+	
+	select(sentak, イベント$「幸福の為の天体観測」)
+	if (sentak == 1) 
+	{
+	msg(――塔の最上階は空を天井に瓦礫だらけだった。@
+	ここ数日、暇さえあれば最上階で呆ける、$
+	他ならぬフロラント・リンギが吹き飛ばしたから。)
+	erase()
+	wait(10)
+	msg(――強い風に高く舞い上がったタングステンは、$
+	開けっ放しになった最上階に着地しようとする。@
+	最初は素足で踏ん張ってみるも、速度を殺しきれずに$
+	ぴょんぴょんと飛び跳ねた後にごろんと寝転がった。)
+	msg(――むくりと起き上がるタングステンは、$
+	体中が擦り傷だらけになってしまっていたが、$
+	彼女がいの一番に見たのは足の裏だった。@
+	案の定真っ黒。)
+	msg(――気休めと分かりつつ足の裏をはたいて、$
+	ぴょこぴょこと飛んで砂埃を落した。)
+	erase()
+	wait(10)
+	talk(ringi, タングステン、よく登ってきたわね。)
+	talk(tungsten, 風が強くて向きが良くないとだめ。)
+	talk(ringi, あっそ。)
+	talk(tungsten, フロラントちゃん。$
+	いい加減引き篭もりをやめないと、$
+	帰って来る場所がなくなっちゃうよ？)
+	talk(tungsten, 私はフロラントちゃんの代わりだ。$
+	みんながそう言うから、その通りにしちゃうぜ。)
+	talk(ringi, 私は……。)
+	talk(tungsten, "ああ、サノア、サノア。$
+	やはりもう一度顔が見たい。@
+	見れば臓物が煮えくり立つだろうけれど、$
+	やはり殺してやりたいと思うだろうけども"……。)
+	talk(ringi, ちょっと……！)
+	erase()
+	wait(10)
+	msg(――フロラントは赤面した。)
+	erase()
+	wait(10)
+	talk(tungsten, いいんだぜ。)
+	talk(tungsten, フロラントちゃんは一途だったもんな。@
+	殺す事が始発点だと定めたら、$
+	殺すまで一歩も進めなくなっちゃったんだよね。)
+	talk(ringi, むぐ……！)
+	talk(tungsten, 星の知ってる事は何でも分かるんだ。)
+	talk(tungsten, 昔、オーロラを作ろうとして$
+	アハルエドジェを入れて三人で空の話をよくしたよ。)
+	erase()
+	wait(10)
+	shake(10)
+	playSE(chari15_a)
+	wait(15)
+	msg(――タングステンは外套から長剣を取り出した。$
+	目測１メートル余の魔法加工を施された肉厚な"石剣"。)
+	erase()
+	wait(10)
+	talk(tungsten, 隕鉄を叩いて作った、青面金剛の石剣だ。$
+	これの為に禍津島とカレリアを巡ったぜ。)
+	talk(ringi, ……何で戦わなきゃなんないのよ。$
+	しかも魔女が、剣で。)
+	erase()
+	wait(10)
+	shake(10)
+	playSE(swing36_b)
+	wait(15)
+	talk(tungsten, よっ、ほっ、こうだっけかな。)
+	erase()
+	wait(10)
+	msg(――タングステンは外套を翻して、$
+	軽く剣を振るって見せる。@
+	それをフロラントが見間違えるはずもない。)
+	erase()
+	wait(10)
+	talk(ringi, ……サノアの……"三間三尺"。)	
+	talk(tungsten, 禍津島にも行ったんだってば。$
+	私ならフロラントちゃんの運命石にも勝てるぜ。)
+	talk(ringi, あんた、何処まで私の事を……。)
+	talk(tungsten, 全部地球はまるっとお見通し！@
+	だからフロラントちゃん。$
+	二つ三つ、君の知りたい事を教えてあげよう。)
+	erase()
+	wait(10)
+	msg(――風向きが変わる。@
+	タングステンから吹き付ける風が、$
+	囁いた何事かをフロラントだけに届けた。)
+	erase()
+	wait(10)
+	talk(ringi, ……！)
+	talk(tungsten, 三度期待を裏切られた気分はどうだ。$
+	お前は絶対に願いを叶えられないのだ。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+	playBGM()
+}
+event s7_p11_ev05
+{
+	scroll(s93)
+	wait()
+	hideSpotMark()
+	showSpotMark(s93)
+	wait(10)
+	
+	select(sentak, イベント$「星に誓いを」)
+	addPower(s7_bp1)
+	addSpot(s93,s7_bp1)
+	addUnit(ringi,s93)
+	changeMaster(ringi)
+	addLevel(ringi,40)
+	addUnit(redmagus3,s93)
+	addUnit(redmagus3,s93)
+	addUnit(redmagus3,s93)
+	addUnit(redmagus3,s93)
+	addUnit(redmagus3,s93)
+	linkSpot(s40,s93)
+	setTruce(s7_p1,s7_bp1,-1)
+	setTruce(s7_p2,s7_bp1,-1)
+	setTruce(s7_p3,s7_bp1,-1)
+	setTruce(s7_p4,s7_bp1,-1)
+	setTruce(s7_p5,s7_bp1,-1)
+	setTruce(s7_p6,s7_bp1,-1)
+	setTruce(s7_p7,s7_bp1,-1)
+	setTruce(s7_p8,s7_bp1,-1)
+	setTruce(s7_p9,s7_bp1,-1)
+	setTruce(s7_p10,s7_bp1,-1)
+	wait(20)
+	
+	if (sentak == 1) 
+	{
+	scroll(tungsten)
+	wait()
+	hideSpotMark()
+	showSpotMark(tungsten)
+	wait(10)
+	talk(petka, フロラント師が、$
+	貴女の身柄を引き渡すようにと。)
+	talk(tungsten, お断りします。)
+	talk(petka, ……何かありました？)
+	talk(tungsten, 長く生きてると、$
+	知られたくない事は出来てしまうもの。@
+	仄めかしてみたら、怒らせちゃった。)
+	talk(petka, ほどほどにしてくださいね？)
+	talk(tungsten, はい。)
+	talk(petka, 約束できますか？)
+	talk(tungsten, 適度にする！)
+	talk(petka, 約束ですよ。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+}
+event s7_p11_ev06
+{
+	scroll(s7)
+	wait()
+	hideSpotMark()
+	showSpotMark(s7)
+	wait(10)
+	addSpot(sb2,s7_p8)
+	showSpot(sb2)
+	linkSpot(sb2,s76)
+	wait(15)
+	changePowerName(s7_p8,s7_power53)
+	changePowerFlag(s7_p8,Flag76)
+	resetLeague(s7_p1,s7_p8)
+	setDiplo(s7_p1,s7_p8,0)
+	erasePowerMerce(s7_p8)
+	erasePowerStaff(s7_p8)
+	addPowerMerce2(s7_p8,tensiheiboss, baronsuturdayboss)
+	addPowerStaff2(s7_p8,ningen, observer, tensiheiboss, baronsuturdayboss)
+	addLevel(oikusu,10)
+	addUnit(meaberuta,s7_p8)
+	setDiplo(s7_p11,s7_p8,0)
+	resetLeague(s7_p11,s7_p8)
+	wait(20)
+	
+	if (yet(s7_p11_ev02) == 0){
+	select(sentak, イベント$「願うは必殺」)
+	if (sentak == 1) 
+	{
+	scroll(tungsten)
+	wait()
+	hideSpotMark()
+	showSpotMark(tungsten)
+	wait(10)
+	talk(petka, メア＝ベルタさんが居なくなりました。)
+	talk(tungsten, オトラン北東で何か観測したね。$
+	魔力場の急激な変動とかあったはずだろう。)
+	talk(petka, それも報告しようと思っていました。@
+	……何かやったんですか？)
+	talk(tungsten, いやあ……どうだろうね。$
+	私がしたといえばそうだし、$
+	何もしてないと言えばしてないし。)
+	talk(tungsten, 片付けていこうか。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}}
+}
+event s7_p11_ev07
+{
+	scroll(gyrowetz)
+	wait()
+	hideSpotMark()
+	showSpotMark(gyrowetz)
+	wait(10)
+	addUnit(gyrowetz,s7_p11)
+	dialog(ギロベッツ師を捕まえました！)
+	
+	select(sentak, イベント$「ギロやん捕まえた」)
+	if (sentak == 1) 
+	{
+	talk(tungsten, はい、ギロやん捕まえた。)
+	talk(gyrowetz, ぐえーっ、寄るな寄るな！$
+	お前は近づくな！)
+	talk(tungsten, はいはい、仲良くしよう。$
+	大丈夫大丈夫、悪いようにはしないから。)
+	talk(tungsten, ギロやんには教えたい事があったんだ。$
+	後でこっそり教えてあげるからね。)
+	talk(tungsten, ええっと、後は。)
+	if (yet(s7_p11_ev08)){
+	talk(tungsten, フロラントちゃんの引き篭もりを、$
+	何とか直さないといけないなー。)
+	}
+	if (yet(s7_p11_ev09)){
+	talk(tungsten, 私に不信感を持ってるのも居るから、$
+	それも何とかしなきゃだぜ。)
+	}
+	if (yet(s7_p11_ev09) == 0 && yet(s7_p11_ev08) == 0){
+	talk(tungsten, ま、こんなところかな。)
+	}
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+}
+event s7_p11_ev08
+{
+	scroll(ringi)
+	wait()
+	hideSpotMark()
+	showSpotMark(ringi)
+	wait(10)
+	addUnit(ringi,s7_p11)
+	dialog(フロラント師を捕まえました！)
+	
+	select(sentak, イベント$「フロラント捕まえた」)
+	if (sentak == 1) 
+	{
+	talk(tungsten, はい、フロラントちゃん捕まえた。)
+	talk(ringi, で、どうするの？$
+	返答によってはもう一戦行くわよ。)
+	talk(tungsten, はいはい、仲良くしよう。$
+	大丈夫大丈夫、悪いようにはしないから。)
+	talk(tungsten, フロラントちゃんは後。$
+	全部終わった後にきっと役目が来るから、$
+	それまで放置するのだ。)
+	talk(tungsten, ええっと、後は。)
+	if (yet(s7_p11_ev07)){
+	talk(tungsten, あっ、まだギロやんが居ないや。$
+	早いとこ捕まえないと。)
+	}
+	if (yet(s7_p11_ev09)){
+	talk(tungsten, 私に不信感を持ってるのも居るから、$
+	それも何とかしなきゃだぜ。)
+	}
+	if (yet(s7_p11_ev07) == 0 && yet(s7_p11_ev08) == 0){
+	talk(tungsten, ま、こんなところかな。)
+	}
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+}
+event s7_p11_ev09
+{
+	scroll(meaberuta)
+	wait()
+	hideSpotMark()
+	showSpotMark(meaberuta)
+	wait(10)
+	addUnit(meaberuta,s7_p11)
+	dialog(メア＝ベルタを捕まえました！)
+	
+	select(sentak, イベント$「メア＝ベルタ捕まえた」)
+	if (sentak == 1) 
+	{
+	talk(tungsten, はい、めあめあ捕まえた。)
+	talk(meaberuta, うわあああ、何たる事じゃ！$
+	私に何をするつもりじゃ！)
+	talk(tungsten, はいはい、仲良くしよう。$
+	大丈夫大丈夫、悪いようにはしないから。)
+	talk(tungsten, やっぱり悪巧みしてたね。$
+	どうせ大魔道には何しても無駄なんだから、$
+	何したって気にしないけどねー。)
+	talk(tungsten, ええっと、後は。)
+	if (yet(s7_p11_ev08)){
+	talk(tungsten, フロラントちゃんの引き篭もりを、$
+	何とか直さないといけないなー。)
+	}
+	if (yet(s7_p11_ev07)){
+	talk(tungsten, あっ、まだギロやんが居ないや。$
+	早いとこ捕まえないと。)
+	}
+	if (yet(s7_p11_ev07) == 0 && yet(s7_p11_ev08) == 0){
+	talk(tungsten, ま、こんなところかな。)
+	}
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+}
+event s7_ed11
+{
+	scroll(tungsten)
+	wait()
+	hideSpotMark()
+	showSpotMark(tungsten)
+	wait(10)
+	playBGM(#add酒ぶねの葡萄たち)
+	wait(25)
+	
+	select(sentak, 魔都学閥連合：ＥＤ)
+	if (sentak == 1) 
+	{
+	msg(――戦争は終わった。@
+	国家と呼べる大勢力間の衝突は終息し、$
+	今や覇権を握る魔女による治安維持の段階にあり、$
+	しかし、戦いは終わらなかった。)
+	msg(――それもそのはず、$
+	魔女には外部の土地を統治する気が無いのだ。@
+	あちらこちらで空白地となった自治都市が、$
+	独立しては魔女を見れば解散する繰り返し。)
+	msg(――こんな物は戦争とは言わない。)
+	erase()
+	wait(10)
+	talk(petka, タングステン師。$
+	脱落率が三割を超えたみたいです。)
+	talk(tungsten, まだいける。)
+	talk(petka, はい。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	talk(petka, タングステン師。$
+	脱落率が五割を超えちゃいましたよ。@
+	ホムンクルスへの置換と維持が間に合いません。)
+	talk(tungsten, まだいける。@
+	黒宗の死霊術師を集めよう、$
+	不死者の集団運用を開始する。)
+	talk(petka, はい。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	talk(petka, タングステン師。$
+	不死者について苦情が大量に寄せられていまして、$
+	反乱と脱走と物資の持ち逃げが止まりませんよ。)
+	talk(tungsten, まだ大丈夫。$
+	そう、鎮圧すればね。)
+	talk(petka, はい。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	talk(kamu, タングステン師。$
+	私と貴女しか居ません。)
+	talk(tungsten, じゃあ、帰ろうか。)
+	talk(kamu, はい。)
+	erase()
+	wait(10)
+	talk(kamu, そう言えば、フロラントには何て言ったんです？)
+	talk(tungsten, いやあ……？@
+	フロラントちゃんは、$
+	張り合いが無いと駄目な人みたいだねえ。)
+	talk(kamu, ギロベッツ師は？)
+	talk(tungsten, サノアがセイラムと一緒に纏めてた奥義書、$
+	屍を這い回る蛆の教典の在り処を教えたよ。)
+	talk(kamu, メア＝ベルタ。)
+	talk(tungsten, 魔都に縮こまるめあめあ居れば、$
+	行って怖がらなくてもよいと言ってやる。@
+	そんな人に私はなりたい。)
+	talk(tungsten, ギロやんは魔都に無関心すぎ。$
+	フロラントちゃんやる気無さすぎ。$
+	メア＝ベルタは目上の人を怖がり過ぎ。)
+	talk(tungsten, つまるところ、$
+	ちょっとみんなサノアに頼りすぎ。)
+	talk(tungsten, 魔都の外は全部叩き潰したし、$
+	魔女は外を歩くのに疲れてうんざりしたし。@
+	これでしばらくは平和になるね。)
+	talk(kamu, 師は、何がしたかったのですか？)
+	talk(tungsten, ん、私の主張は一貫してる。@
+	誰にも邪魔されず、夜には星を見ていたいのさ。$
+	その為に、みんなの願いを叶えたり叶えなかったり。)
+	talk(tungsten, ああ、もう一度、$
+	かつてを思い出して恐れるがいい。@
+	夜に蠢く狼の群れに怯える如く、$
+	魔女の行進を恐れるがいい。)
+	erase()
+	wait(10)
+	talk(tungsten, ってね。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	scroll(s40)
+	wait()
+	hideSpotMark()
+	showSpotMark(s40)
+	wait(10)
+	msg(――こうして、$
+	ほぼ全ての魔女が自発的に森へ帰った。@
+	一番最後に魔都へ戻ったタングステンの前に、$
+	無言で閉まっている大門が聳えている。)
+	erase()
+	wait(10)
+	talk(tungsten, フロラントちゃーん。)
+	talk(ringi, たんぐすてぇーん。)
+	erase()
+	wait(10)
+	msg(――城壁の上からタングステンの声色を真似た$
+	フロラントが見下ろしている。)
+	erase()
+	wait(10)
+	talk(ringi, 引責辞任よ、けえれけーれ。)
+	talk(tungsten, はーい。)
+	erase()
+	wait(10)
+	msg(――フロラントは拍子抜けを隠さなかったが、$
+	タングステンは言われたまま素直に森へ帰った。@
+	彼女は魔女たちに捕まる前の、$
+	穏やかな生活を取り戻したのである。)
+	erase()
+	wait(10)
+	talk(tungsten, 終わったー。)
+	erase()
+	hideSpotMark()
+	wait(10)
+	msg(――タングステンは森の中。@
+	突如として周囲を蹂躙するだけ蹂躙し、$
+	統治も略奪もせず森へ引っ込んだ魔女を、$
+	森の外の人間はやはり理解できなかった。)
+	msg(――ただ理解出来なくとも、昔の様に人々は、$
+	目の前の剣や銃口より遠くの魔女を怖がった。@
+	魔女の練り歩いた南方だけでなく、$
+	その話を聞いた周りの国々でさえ。)
+	msg(――兎も角百年程度は周囲から距離を取られ、$
+	必要に応じて各国から報告だけが恐る恐る来た事は、$
+	当時の人々の魔女への印象を物語っている。)
+	erase()
+	wait(10)
+	msg(――それにしてもタングステンは森の中。)
+	erase()
+	wait(10)
+	msg(――――――$――――)
+	erase()
+	wait(10)
+	}
+	dialog(魔都は大陸南方の戦乱を勝利しました！)
+	dialog(そして今も、タングステンは森の中。)
+	exit(――ハルスベリヤ叙事詩２――$　ifシナリオ　ＥＮＤ)
+}
+
+
+event s7_sys_ev01
+{
+	scroll(s110)
+	wait()
+	hideSpotMark()
+	showSpotMark(s110)
+	linkSpot(s51,s110)
+	if (isAlive(s7_p5)){
+	changePowerFlag(s7_p5,Flag3)
+	}
+	if (isAlive(s7_p9)){
+	changePowerFlag(s7_p5,Flag62)
+	}
+	wait(25)
+	dialog(コスタ内戦で封鎖されていた南地中海・リヴィエラ間航路が開通しました！)
+	wait(15)
+}
+event s7_sys_ev02
+{
+	scroll(s18)
+	wait()
+	hideSpotMark()
+	showSpotMark(s18)
+	wait(10)
+	changePowerName(s7_p9,s7_power54)
+	changePowerFlag(s7_p9,Flag78)
+	resetLeague(s7_p4,s7_p9)
+	setDiplo(s7_p4,s7_p9,0)
+	erasePowerMerce(s7_p9)
+	erasePowerStaff(s7_p9)
+	addPowerMerce2(s7_p9,deadmermaid, ikachan, deaddoctor, kaniyoyasurakani)
+	addPowerStaff2(s7_p9,ningen, undead, ningyo, syuzokukyoshin, undead, dragon, kingsofdacho, deadmermaid, ikachan, deaddoctor, kaniyoyasurakani)
+	changeMaster(pompadour)
+	eraseUnit(giitheundead2)
+	addUnit(cambronne,s7_p1)
+	wait(25)
+	dialog(コスタ公が消滅しました！$勢力は海魔ポンパドールが引き継ぎます！)
+	wait(15)
+}

@@ -1,0 +1,96 @@
+// ――スラド砦は、危険な連中に占領されている。
+// shiftjisで開くために先頭にじゃぱにーず
+spot finalpawooons18
+{
+	name  = 貿易港ローカ・コスタ
+	image = fiTOWN1
+	x = 412
+	y = 1288
+	member@finalpawooon = gii, eritesuna, hakafeka
+	map    = spot18
+	gain = 4000
+	capacity = 16
+	monster = halfmermaid*3, griffon
+	castle = 16
+	bgm = #大規模戦闘４
+	merce = mermaid, halfmermaid, mitrailleuse, voltigeur, malmze, doraconianzouave
+	value = 15000
+}
+
+spot finalpawooons23
+{
+	name  = 赤色砦
+	image = fiCASTLE2
+	x = 580
+	y = 959
+	member@finalpawooon = ringi
+	map    = spot23
+	gain = 400
+	capacity = 16
+	monster = redmagus*2, forestguard, moonchildren
+	castle = 60
+	merce = voltigeur, hkahocav
+}
+
+spot finalpawooons41
+{
+	name  = 緑色砦
+	image = fiCASTLE2
+	x = 528
+	y = 1163
+	map    = spot41
+	gain = 400
+	capacity = 12
+	member@finalpawooon = miruka , gyrowetz, varoverin
+	monster = greenmagus, forestguard, marseillaise*2
+	castle = 60
+	merce = greenmagus, voltigeur
+	value = 10000
+
+}
+
+spot finalpawooons42
+{
+	name  = 青の森
+	image = fiFOREST1
+	x = 306
+	y = 1029
+	map    = spot42
+	gain = 200
+	capacity = 16
+	member@finalpawooon = yolande, kamu, petka
+	monster = forestguard, marseillaise, moonchildren
+	castle = 60
+	merce = forestguard, mitrailleuse, hallstatt
+}
+spot finalpawooons79
+{
+	name  = ヴィエンヌ
+	image = fiTOWN8
+	x = 552
+	y = 1238
+	map    = spot79
+	gain = 800
+	capacity = 16
+	member@finalpawooon =  michelle, neuilly, vaquette, suffren, champollion
+	monster = kyugoshi, noukesutasouhei, halfmermaid
+	castle = 50
+	merce = kyugoshi, halfmermaid
+}
+
+spot finalpawooons110
+{
+	name  = カレシエン
+	image = fiTOWN4
+	x = 535
+	y = 1320
+	map    = spot110
+	gain = 800
+	capacity = 18
+	member@finalpawooon = manoriko, serahakka, cambronne, degard, aznatalvessel
+	monster = costafusiliers, outremer, mitrailleuse
+	castle = 50
+	castle_battle = on
+	merce = mitrailleuse
+	value = 15000
+}

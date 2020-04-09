@@ -1,0 +1,53 @@
+unit tatarimichelle : michelle
+{
+	name = ブーランジェ将軍
+	help = 禍津明神
+	level = 1
+	level@sc7 = 40
+	cost  = 1800
+	price   = 28800
+	loyal@sc7 = tatarimichelle*100
+	loyal = tatarimichelle*60
+	medical = 500
+	talent  = on
+	sex     = female
+	race    = ningen
+	class   = tatari
+	image   = unit911c
+	dead    = 我が立たせれば、青山に鵺は鳴きぬ
+	retreat = いざうれ、我が腕に眠れ
+	join    = ヌイー、君と和解したい。$煩い鳥どもの騒ぎ出す朝が来る前に。
+	face = face911e.png
+	alive_per = 100
+	level_max = 100
+	w = 32
+	h = 32
+	voice_type = michelle
+	friend = ningen, ningyo, undead, outremer, oni, keisei, ghoul, costafusiliers, witchdoctor, hussard, cataphract, mermaid, raberiyashinpei, mitrailleuse, halfmermaid, witchdoctor, gendarmecuirassier
+	staff = ningen, undead, ningyo, outremer, costafusiliers, oni, keisei, ghoul
+	member =  outremer*7
+	member@sc7 =  outremersp*7
+	yabo = 80
+	kosen = 95
+	brave = 85
+	sortkey = 342
+	hp      = 1950
+	attack  = 125
+	defense = 70
+	hprec   = 33
+	move    = 240
+	power_name = 大南海復活神政体
+	flag = Flag103
+	multi = 15,hp,9,mp,9,attack,7,defense,9,magic,7,magdef,5,dext,5,hprec
+	consti = slash*7, rgun*6, taiho*5, taiuma*5, taikm*2, taimg*2, bomb*6, arrow*6, magic*4, shine*8, dark*8, lance*8, para*10, conf*10, fear*10, ill*6, death*10
+	skill = b_magatsu00, y_c_attack16, m_magatsu_attack02, b_hp_magatsu03, magic_allcure_ordinary02, michelle_kirakira01, ordinary_move09, ls_michelle, ls_michelle2
+	leader_skill = ordinary_move09
+	learn =
+	1, b_fhpstatusb,b_fatstatus,
+	10, b_fhpstatusb2,b_fatstatus,
+	15, b_fhpstatusb3,b_fatstatus,c_antifearstatus, samekaisyo_sp01,
+	20, b_fhpstatusb3,b_fatstatus2,c_antifearstatus, samekaisyo_sp01,
+	25, b_fhpstatusb3,b_fatstatus3,c_fmovestatus,c_antifearstatus, samekaisyo_sp01,
+	30, b_fhpstatusb4,b_fatstatus4,c_fmovestatus2,c_antifearstatus, samekaisyo_sp01,
+	35, b_fhpstatusb4,b_fatstatus4,c_fmovestatus2,c_antifearstatus, samekaisyo_sp01, michelle_spheal01, michelle_notheal
+}

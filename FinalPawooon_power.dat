@@ -1,0 +1,182 @@
+
+
+workspace
+{
+	fp_power81 = 魔都紫宗
+	fp_power82 = コスタ竜公国
+	fp_power83 = アルフリット王国
+
+	fp_power84 = ハゲタカ騎兵団
+	fp_power85 = カクラ・ハカンの軍勢
+	fp_power86 = 大魔道"氾濫"フロラント・リンギ
+	fp_power87 = 黒宗黒火セクト
+}
+
+power fp_p1
+{
+	name   = 魔都紫宗
+	// diplo  = 
+	// league = @
+	money = 25600
+	flag  = Flag6
+	master = yolande
+	fix = off
+	home   = s39, finalpawooons42, s43, s105
+	staff  = ningen, purplemagus, greenmagus, redmagus, necromagus, marseillaise, moonchildren//  
+	merce = costafusiliers*2, outremer*2, mitrailleuse, halfmermaid, voltigeur
+	merits = yolande*1200, kamu*1000,　petka*1000
+	head   = 魔都大学総長
+	diff   = 中
+	text   =
+【ＥＤ有】$
+大陸の戦乱は暴れるだけ暴れまわった魔女により平定された。$
+森に引きこもった大半の魔女はこれまで通りの生活を送っていたが、そうはしなかったものもいる。$
+ヨランドは各地に大学を建て総長として多大な権力と金を手にし、
+我が世の春を謳歌していた。$
+$
+魔女たちというのは最悪だ。
+何もしないくせにこの騒動を処理せねば、
+かつてスフェイス卿がそうであったように、ヨランドは吊るされてしまうだろう。$
+そんなのごめんだ！！$
+幸い今のヨランドには力がある、かつて切望したものが。$
+このヨランド、昔とは違うということを存分に示してやれ！！
+;
+	member = finalpawooons42, s39, s43, s105
+}
+power fp_p2
+{
+	name   = コスタ竜公国
+	//　diplo  = 
+	league = @
+	money = 24500
+	flag  = Flag13
+	master = gii
+	fix = off
+	home   = finalpawooons18, s78, finalpawooons79, s106, s110
+	staff  = ningen, ningyo, costafusiliers, outremer, halfmermaid, malmze, mitrailleuse , mermaid, griffon, coatolrider,  doraconianzouave
+
+	merce = costafusiliers*2, outremer*2, mitrailleuse, halfmermaid, voltigeur, malmze, mermaid*2, griffon, coatolrider
+	merits = champollion*1000, aznatalvessel*1000
+	head   = コスタ竜公
+	diff   = 中
+	text   =
+	【イベント無し】$
+;
+	member = finalpawooons18, finalpawooons79, s106, finalpawooons110
+}
+
+
+power fp_p3
+{
+	name   = アルフリット王国
+	diplo  = s7_p8*20, s7_p11*20
+	league = @
+	money = 46000
+	flag = Flag31
+	master = rasuthimu
+	fix = off
+	home   = s2, s6, s40, s107, s108
+	staff  = ningen, seidou, noukesutasouhei, furankisuka, kuroirojyushi, seidoubb, goldengleece
+	merce = seidou*2, noukesutasouhei, furankisuka*2, kuroirojyushi*2, seidoubb, goldengleece
+	merits = wool*10000, gofmong*6500, maruguri*4500, arubone*4000, reitaru*8500, faro*4500, goruda*1000, dorosbeig*800, sering*1000
+	head   = アルフリット国王
+	diff   = 低
+	text   =
+【イベント無し】$
+
+;
+	member = s6, s107, s108
+}
+
+
+
+power fp_p4
+{
+	name   = ハゲタカ騎兵団
+	diplo  = s7_p6*0, s7_p7*0, s7_p11*20
+	league = @
+	money = 24500
+	flag = Flag30
+	master = roma
+	fix = off
+	home   = s25
+	staff  = ningen, undead, schwarzfeuerpionier, schwarzfeuerjaeger, vulture
+	merce = schwarzfeuerpionier*1, schwarzfeuerjaeger*3, vulture*2
+	merits = roma*4000,  nemzel*3000
+	head   = 浄罪機関長
+	diff   = 中
+	text   =
+板金鎧を着込んだ青銅騎士団は、
+コスタ公が動員した軍船に乗り切らなかった。
+陸路大森林の横断で帝都を目指す騎士団だが、
+魔女の無気力によって大森林を彷徨った挙句、遠征は頓挫した。
+黒火浄罪機関は宿敵である魔女によって命拾いをしたと言っても良い。$
+森を縦断してきた海産の怪物二匹をスラド砦を犠牲に始末して、
+ミルカは西に行軍を定めた。当然、漁夫の利を得る為である！
+// ――スラド砦は、危険な連中に占領されている。
+;
+	member = s25, s87
+}
+
+power fp_p5
+{
+	name	= カクラ・ハカンの軍勢
+	diplo	=
+	league	= @
+	money	= 10000
+	flag	= Flag5
+	master	= kakura
+	fix	= warlike
+	home	= s39, s40, s41, s42, s43, s105
+	
+}
+
+power fp_p6
+{
+	name   = 魔都赤宗
+	diplo  = @
+	league = @
+	money = 42000
+	flag = Flag56
+	master = ringi
+	fix = off
+	home   = finalpawooons23
+	staff  = ningen, redmagus, necromagus, moonchildren
+	merce  = redmagus2, redmagus3, moonchildren2, moonchildren3
+	head   = 魔都大学
+	diff   = 高
+	text   =
+;
+	member = finalpawooons23
+}
+
+power fp_p7
+{
+	name	= 黒宗黒火セクト
+	diplo	= @
+	league	= @
+	money	= 24000
+	flag	= Flag30
+	master	= miruka
+	fix	= off
+	home	= finalpawooons41
+	staff	= ningen, necromagus, moonchildren, undead, schwarzfeuerpionier, schwarzfeuerjaeger, vulture
+//	merce	= 
+	head	= 	元浄罪機関長
+	diff	= プレイ非推奨
+//	text	=
+//	黒宗が黒竜大公の宝物庫の存在を確認、これを解析したが中にいたのはしがない人間ひとり。$
+//	元宿敵であった魔女により図らずも自由を手にしたミルカであったが、周囲にいるのはかつての蝗の群れでなく教養人ばかりである。$
+//	しかしやらねばならない、ミルカは思い返す。「私の思い通りになるなら、なんだって良いのだ。」、と。$
+//	$
+//	text	= ヘルミナの監禁下から逃げ延びたミルカは緑色砦周辺へ
+	text	=
+	黒宗により黒竜大公の宝物庫があばかれたものの、中にあったのはただの人間ひとり。$
+	しかしながら、そんなところにいるのはただの人間なのだろうか？$$
+	
+	――――――$$
+	―
+	――緑色砦の浪人集団が決起集会を起こし、ミルカの命運はただその舌頭に託された。
+	;
+	member	= finalpawooons41
+}
