@@ -19,24 +19,37 @@ event fp_p6_new01
 	hideSpotMark()
 	showSpotMark(finalpawooons23)
 	wait(10)
-	playBGM(#add酒ぶねの葡萄たち)	//収穫祭がいいかも
+	playBGM(#北海のてきさす) //？ #神仙たち？
 
 	select(sentak, イベント$「魔都赤宗：ＯＰ」)
 	if (sentak == 1) 
 	{
 	wait(10)
-	shake(10)
-	playSE(power32)
-	wait(15)
-	// ↑はカクラハカンのスポットにするべきか
-	talk(tungsten, あーれーっ！)
+	scroll(s105)
+	wait()
+	hideSpotMark()
+	showSpotMark(s105)
 	wait(10)
 	shake(10)
 	playSE(power32)
 	wait(15)
+	playSE(fall05)
+	// ↑はカクラハカンのスポットにするべきか
+	talk(tungsten, あーれーっ！)
+	scroll(finalpawooons23)
+	wait()
+	hideSpotMark()
+	showSpotMark(finalpawooons23)
+	wait(10)
+	shake(10)
+	playSE(hit_s10_b)
+	wait(15)
+
 	msg(――フロラント・リンギ師が屋上を見ると、$
 	完膚無きまでにボロボロになったタングステンが、$
 	べちょりとへばりついていた。)
+	erase()
+	wait(10)
 	talk(ringi, うわ、ボロの外套がボロボロね。)
 	erase()
 	wait(10)
@@ -45,35 +58,48 @@ event fp_p6_new01
 	死者は安らかに再度眠るべきだ。)
 	talk(tungsten, さっき負けたのは左フックからいったからだ。$
 	次は右ストレートでのしてやる！！@
-	щ(ﾟДﾟщ)ｶﾓｰﾝアハルエドジェ！！)
+	カモーンアハルエドジェ！！)
+	erase()
+	wait(10)
+	
 	msg(――タングステンが魔方陣を展開させると、$
 	中から二人現れた。)
 	erase()
 	wait(10)
 
 	playSE(power32)
+	wait(10)
 	// AddUnit()ネーラさんと馬鹿を追加
-	// talk(, む。)
-	// talk(, ちょ、ちょちょ……！)
+	talk(tiffbell, む。)
+	erase()
+	wait(10)
+	talk(nerafanas, ちょ、ちょちょ……！)
 	erase()
 	wait(10)
 
 	talk(tungsten, 間違えた。$
 	もういっちょ！)
+	erase()
+	playSE(power32)
+	
+	wait(10)
 	// AddUnit() ルコニア
-	// talk(, うん？)
+	talk(rukonia, うん？)
 	erase()
 	wait(10)
 
 	talk(tungsten, 惜しい。&
 	もういっちょ！)
+	erase()
+	playSE(power32)
+	wait(10)
 	// AddUnit() アハルエドジェ
-	// talk(, 何だ急に！？)
+	talk(ejderha, 何だ急に！？)
 	erase()
 	wait(10)
 
 	talk(tungsten, よしきた。@
-	今日君……あー君達に集まってもらったのは、$
+	今日君@……あー君達に集まってもらったのは、$
 	ちょっと力を貸してほしくてね。)
 	talk(tungsten, ろくでなしに住処を追われてしまって、$
 	これから取り返しに行くんだ。)
@@ -81,17 +107,17 @@ event fp_p6_new01
 	嫌よ、面倒くさいもの。)
 	talk(tungsten, ついでに適切な対処をしなかった、$
 	紫宗も叩きのめすよ。)
-	talk(ringi, そうね。&
+	talk(ringi, そうね。$
 	ついていって眺めるぐらいはしてあげるわ。)
-	talk(tungsten, 君達も北に帰るのだし一緒に行くよね？$
+	talk(tungsten, 君達も北に帰るのだし一緒に行くよね？@
 	ついでに大森林の観光もしていこう。$
 	良い場所をたくさん知っているんだ。)
-	// (, あの。) ルコニア
+	talk(rukonia, あの。)
 	talk(tungsten, コスタにも観光旅行する？$
-	かわいい部下も遊んでるみたいよ？)
+	かわいい部下が遊んでるみたいだよ？)
 
 	}
-}
+	}
 
 event fp_p1_new01
 {
